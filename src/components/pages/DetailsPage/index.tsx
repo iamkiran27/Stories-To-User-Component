@@ -1,29 +1,34 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CryptoDetailCard from "../../molecules/CryptoDetailCard";
-import Footer from "../../organisms/Footer";
-import Header from "../../organisms/Header";
+
 import Overview from "../../organisms/Overview";
 import SideBar from "../../organisms/SideBar";
 
 const DetailsPage = () => {
+  const [walletList, setwalletList] = useState([]);
+  useEffect(() => {
+    // make an api call to fetch respective crypto data
+  }, []);
+  const handleAddToWatchList = () => {};
+
   return (
     <Grid>
-      <Grid item>
+      {/* <Grid item>
         <Header handleSellButton={() => {}} handleBuyButton={() => {}} />
-      </Grid>
+      </Grid> */}
       <Grid item>
         <SideBar />
       </Grid>
       <Grid item>
-        <CryptoDetailCard handleAddToWatchList={() => {}} />
+        <CryptoDetailCard handleAddToWatchList={handleAddToWatchList} />
       </Grid>
       <Grid item>
         <Overview walletList={[]} />
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <Footer />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

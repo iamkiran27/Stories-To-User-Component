@@ -1,29 +1,34 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BuySellCrytpo from "../../organisms/Buy-SellCrypto";
-import Footer from "../../organisms/Footer";
-import Header from "../../organisms/Header";
+
 import PurchaseDetails from "../../organisms/PurchaseDetails";
 import SideBar from "../../organisms/SideBar";
 
 const PurchasePage = () => {
+  const [cryptoList, setcryptoList] = useState([]);
+
+  useEffect(() => {
+    // make api call to fetch crypto list ans store that in the state variable
+  }, []);
+
   return (
     <Grid>
-      <Grid item>
+      {/* <Grid item>
         <Header handleSellButton={() => {}} handleBuyButton={() => {}} />
-      </Grid>
+      </Grid> */}
       <Grid item>
         <SideBar />
       </Grid>
       <Grid item>
-        <BuySellCrytpo />
+        <BuySellCrytpo cryptoList={cryptoList} />
       </Grid>
       <Grid item>
         <PurchaseDetails />
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <Footer />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

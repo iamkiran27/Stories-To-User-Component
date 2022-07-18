@@ -1,17 +1,25 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Grid } from "@mui/material";
-import React from "react";
-import Header from "../../organisms/Header";
+import React, { useState, useEffect } from "react";
+
 import MyPortfolio from "../../organisms/MyPortfolio";
 import PortfolioValue from "../../organisms/PortFolioValue";
 import SideBar from "../../organisms/SideBar";
 import WatchList from "../../organisms/WatchList";
 
 const DashboardPage = () => {
+  const [watchListData, setwatchListData] = useState([]);
+  const [coinslist, setcoinslist] = useState([]);
+  const [recentTransactionList, setrecentTransactionList] = useState([]);
+  useEffect(() => {
+    //  make api call to fetch all the datand store them in the state variables
+  }, []);
+
   return (
     <Grid>
-      <Grid item>
+      {/* <Grid item>
         <Header handleSellButton={() => {}} handleBuyButton={() => {}} />
-      </Grid>
+      </Grid> */}
       <Grid item>
         <SideBar />
       </Grid>

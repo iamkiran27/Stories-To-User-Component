@@ -9,7 +9,7 @@ import SecondaryCard from "../../molecules/SecondaryCard";
 import SpeedDeliveryCard from "../../molecules/SpeedDeliveryCard";
 
 interface props {
-  cryptoList?: {
+  cryptoList: {
     id: number;
     icon: string;
     title: string;

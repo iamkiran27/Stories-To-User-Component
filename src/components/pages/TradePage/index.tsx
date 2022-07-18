@@ -1,18 +1,23 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Dropdown from "../../molecules/Dropdown";
 import SearchAssets from "../../molecules/SearchAssests";
-import Footer from "../../organisms/Footer";
-import Header from "../../organisms/Header";
+
 import SideBar from "../../organisms/SideBar";
 import Trade from "../../organisms/Trade";
 
 const TradePage = () => {
+  const [tradeList, settradeList] = useState([]);
+
+  useEffect(() => {
+    // make api call to get trade list .
+  }, []);
+
   return (
     <Grid>
-      <Grid item>
+      {/* <Grid item>
         <Header handleSellButton={() => {}} handleBuyButton={() => {}} />
-      </Grid>
+      </Grid> */}
       <Grid item>
         <SideBar />
       </Grid>
@@ -23,12 +28,12 @@ const TradePage = () => {
           <Dropdown />
         </Grid>
         <Grid item>
-          <Trade tradeList={[]} />
+          <Trade tradeList={tradeList} />
         </Grid>
       </Grid>
-      <Grid item>
+      {/* <Grid item>
         <Footer />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
