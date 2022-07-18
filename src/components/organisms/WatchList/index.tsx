@@ -1,9 +1,44 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import IconImage from "../../atoms/IconImage";
+import TextTypography from "../../atoms/TextTypography";
+import GraphCard from "../../molecules/GraphCard";
 
-const WatchList = () => {
-  return (
-    <div>WatchList</div>
-  )
+import LabelWithIcon from "../../molecules/LabelWithIcon";
+
+interface Props {
+  watchListData: {
+    id: number;
+    image: string;
+    title: string;
+    value: string;
+    time: string;
+    grpahData: any;
+
+    graphColor: string;
+  }[];
 }
 
-export default WatchList
+const WatchList = (props: Props) => {
+  return (
+    <Grid>
+      <Grid item>
+        <TextTypography />
+        <LabelWithIcon handleClick={() => {}} />
+        <Box>
+          <LabelWithIcon handleClick={() => {}} />
+          <IconImage />
+          <IconImage />
+        </Box>
+      </Grid>
+      <Grid item>
+        {props.watchListData.map((value) => {
+          return <GraphCard />;
+        })}
+      </Grid>
+    </Grid>
+  );
+};
+
+export default WatchList;

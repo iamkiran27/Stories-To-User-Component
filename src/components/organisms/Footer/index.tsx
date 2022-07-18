@@ -1,9 +1,24 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import React from "react";
+import IconButton from "../../atoms/IconButton";
+import TextTypography from "../../atoms/TextTypography";
+import Dropdown from "../../molecules/Dropdown";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <Grid>
+      <Grid item>
+        <TextTypography />
+        <TextTypography />
 
-export default Footer
+        <TextTypography />
+
+        <TextTypography />
+        <Dropdown />
+        <IconButton handleClick={() => {}} />
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Footer;

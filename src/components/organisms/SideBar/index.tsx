@@ -1,9 +1,22 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import React from "react";
+import IconImage from "../../atoms/IconImage";
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
-  )
-}
+    <Grid>
+      <Grid item>
+        <IconImage />
 
-export default SideBar
+        <IconImage />
+
+        <IconImage />
+
+        <IconImage />
+        <IconImage />
+      </Grid>
+    </Grid>
+  );
+};
+
+export default SideBar;

@@ -1,13 +1,12 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import Dropdown from "../../molecules/Dropdown";
-import SearchAssets from "../../molecules/SearchAssests";
+import BuySellCrytpo from "../../organisms/Buy-SellCrypto";
 import Footer from "../../organisms/Footer";
 import Header from "../../organisms/Header";
+import PurchaseDetails from "../../organisms/PurchaseDetails";
 import SideBar from "../../organisms/SideBar";
-import Trade from "../../organisms/Trade";
 
-const TradePage = () => {
+const PurchasePage = () => {
   return (
     <Grid>
       <Grid item>
@@ -17,14 +16,10 @@ const TradePage = () => {
         <SideBar />
       </Grid>
       <Grid item>
-        <Grid item direction="column">
-          <SearchAssets />
-          <Dropdown />
-          <Dropdown />
-        </Grid>
-        <Grid item>
-          <Trade tradeList={[]} />
-        </Grid>
+        <BuySellCrytpo />
+      </Grid>
+      <Grid item>
+        <PurchaseDetails />
       </Grid>
       <Grid item>
         <Footer />
@@ -33,4 +28,4 @@ const TradePage = () => {
   );
 };
 
-export default TradePage;
+export default PurchasePage;

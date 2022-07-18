@@ -1,8 +1,18 @@
 import React from 'react'
 
-const Graph = () => {
+interface GraphProps {
+  data? : any;
+  graphColor? : string;
+
+}
+
+const Graph = (props : GraphProps) => {
   return (
-    <div>Graph</div>
+
+    <div>
+      {/* render graph here using any react graph library */}
+
+    </div>
   )
 }
 

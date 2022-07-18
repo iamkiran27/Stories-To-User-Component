@@ -1,9 +1,27 @@
-import React from 'react'
+import { Button, Typography, ButtonProps } from "@mui/material";
+import React from "react";
 
-const IconButton = () => {
-  return (
-    <div></div>
-  )
+interface buttonProps extends ButtonProps {
+  handleClick: () => void;
+  childernWidth?: string;
+  textVariant?: string;
 }
 
-export default IconButton
+const IconButton = (props: buttonProps) => {
+  return (
+    <div>
+      <Button
+        onClick={props.handleClick}
+        variant={props.variant}
+        disableElevation
+        sx={{ ...props.sx }}
+      >
+        {props.startIcon}
+        {props.children && <Typography sx={{}}>{props.children}</Typography>}
+        {props.endIcon}
+      </Button>
+    </div>
+  );
+};
+
+export default IconButton;

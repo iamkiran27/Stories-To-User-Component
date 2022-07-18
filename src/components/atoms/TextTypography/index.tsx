@@ -1,9 +1,16 @@
-import React from 'react'
+import { Typography } from "@mui/material";
+import React from "react";
 
-const TextTypography = () => {
-  return (
-    <div>TextTypography</div>
-  )
+interface Text {
+  text?: string;
 }
 
-export default TextTypography
+const TextTypography = (props: Text) => {
+  return (
+    <div>
+      <Typography>{props.text}</Typography>
+    </div>
+  );
+};
+
+export default TextTypography;

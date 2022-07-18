@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import IconImage from "../../atoms/IconImage";
+import TextTypography from "../../atoms/TextTypography";
 
-const LabelWithIcon = () => {
-  return (
-    <div>LabelWithIcon</div>
-  )
+interface props {
+  label?: string;
+  icon?: string;
+  handleClick: () => void;
 }
 
-export default LabelWithIcon
+const LabelWithIcon = (props: props) => {
+  return (
+    <div onClick={props.handleClick}>
+      <TextTypography />
+      <IconImage />
+    </div>
+  );
+};
+
+export default LabelWithIcon;

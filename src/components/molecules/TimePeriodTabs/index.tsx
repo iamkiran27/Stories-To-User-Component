@@ -2,7 +2,9 @@ import React from 'react'
 
 const TimePeriodTabs = () => {
   return (
-    <div>TimePeriodTabs</div>
+    <div>
+      {/* create custom tabs  */}
+    </div>
   )
 }
 

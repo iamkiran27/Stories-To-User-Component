@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Dropdown = () => {
-  return (
-    <div>Dropdown</div>
-  )
+interface Props {
+  options?: {
+    id: number;
+    value: string;
+  }[];
 }
 
-export default Dropdown
+const Dropdown = (props: Props) => {
+  return (
+    <div>{/* create custom Dropdown and use options form the props */}</div>
+  );
+};
+
+export default Dropdown;

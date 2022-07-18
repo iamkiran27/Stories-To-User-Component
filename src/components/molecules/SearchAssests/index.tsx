@@ -1,7 +1,15 @@
 import React from "react";
 
+
+
+
+
 const SearchAssets = () => {
-  return <div>SearchAssets</div>;
+  return <div>
+
+    {/* search bar */}
+
+  </div>;
 };
 
 export default SearchAssets;

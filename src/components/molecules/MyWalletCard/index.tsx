@@ -1,9 +1,38 @@
-import React from 'react'
+import { Box, Card, Grid } from "@mui/material";
+import React from "react";
+import IconImage from "../../atoms/IconImage";
+import TextTypography from "../../atoms/TextTypography";
 
-const MyWalletCard = () => {
-  return (
-    <div>MyWalletCard</div>
-  )
+interface Props {
+  icon?: string;
+  date?: string;
+  month?: string;
+  from?: string;
+  title?: string;
 }
 
-export default MyWalletCard
+const MyWalletCard = (props: Props) => {
+  return (
+    <Card>
+      <Grid>
+        <Grid item>
+          <Box>
+            <TextTypography />
+            <TextTypography />
+          </Box>
+          <IconImage />
+          <Box>
+            <TextTypography />
+            <TextTypography />
+          </Box>
+          <Box>
+            <TextTypography />
+            <TextTypography />
+          </Box>
+        </Grid>
+      </Grid>
+    </Card>
+  );
+};
+
+export default MyWalletCard;

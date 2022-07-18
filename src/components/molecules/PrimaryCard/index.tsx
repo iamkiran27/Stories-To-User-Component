@@ -1,36 +1,33 @@
-import { Card, Grid } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Card, Grid } from "@mui/material";
 import React from "react";
 import IconImage from "../../atoms/IconImage";
 import TextTypography from "../../atoms/TextTypography";
 
-interface Trade {
-  icon?: string;
+interface PrimaryCardProps {
+  image?: string;
   title?: string;
   abbrevation?: string;
-  price?: number;
-  change?: string;
-  marketCap?: string;
-  watch?: boolean;
+  value?: number;
+  differenceMargin?: number;
 }
 
-const TradeCard = (props: Trade) => {
+const PrimaryCard = (props: PrimaryCardProps) => {
   return (
     <Card>
       <Grid>
         <Grid item>
           <IconImage />
+          <TextTypography />
+          <TextTypography />
+
           <Box>
             <TextTypography />
             <TextTypography />
           </Box>
-          <TextTypography />
-          <TextTypography /> <TextTypography />
-          {props.watch ? <IconImage /> : <IconImage />}
         </Grid>
       </Grid>
     </Card>
   );
 };
 
-export default TradeCard;
+export default PrimaryCard;

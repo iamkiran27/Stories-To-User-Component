@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
 
-const IconImage = () => {
-  return (
-    <div>IconImage</div>
-  )
+interface Props {
+  height?: string;
+  width?: string;
+  icon?: any;
 }
+const IconImage = (props: Props) => {
+  return (
+    <div>
+      <img
+        src={props.icon}
+        style={{ height: props.height, width: props.width }}
+        alt="img"
+      />
+    </div>
+  );
+};
 
-export default IconImage
+export default IconImage;
